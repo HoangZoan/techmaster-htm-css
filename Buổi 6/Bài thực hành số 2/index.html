@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Buổi 5 - Bài thực hành</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        i {
+            color: inherit;
+        }
+
+        header {
+            padding: 0 36px;
+            background-color: #30598c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .header-logo {
+            width: 100px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-item {
+            color: white;
+            position: relative;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .nav-item:hover .sub-menu {
+            display: block;
+        }
+
+        .nav-item:hover {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .header-nav a {
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .sub-menu {
+            height: 200px;
+            overflow-y: scroll;
+            background-color: #fff;
+            display: none;
+            width: 180px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .sub-menu a {
+            padding: 16px;
+            color: #000;
+            display: block;
+        }
+
+        .sub-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .first-section {
+            margin-top: 54px;
+            background-image: url('https://pro-seeds.com.vn/wp-content/uploads/2018/10/contents.png');
+            background-size: cover;
+            height: calc(100vh - 54px);
+        }
+
+        .second-section {
+            text-align: center;
+        }
+
+        .second-section img {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="header-logo" src="https://techmaster.vn/resources/image/logo-techmaster/white/white_200x74.png"
+            alt="Techmaster logo">
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#">Lộ trình</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Doanh nghiệp</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Khóa học</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">On lab</a>
+                        </li>
+                        <li>
+                            <a href="#">Trực tuyến</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Khai giảng</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Chúng tôi</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first-section"></section>
+
+        <section class="second-section">
+            <h2>Tiêu đề ...</h2>
+            <img src="https://techmaster.vn/resources/image/route_frontend.jpg" alt="">
+            <img src="https://techmaster.vn/resources/image/route_frontend.jpg" alt="">
+            <img src="https://techmaster.vn/resources/image/route_frontend.jpg" alt="">
+        </section>
+    </main>
+</body>
+
+</html>

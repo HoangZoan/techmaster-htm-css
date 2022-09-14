@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Buổi 4 - Bài thực hành</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        i {
+            width: 12px;
+            height: 12px;
+            color: black;
+        }
+
+        .search-student-form input:focus {
+            border: 1px solid blue;
+            background-color: aquamarine;
+        }
+
+        .student-list {
+            width: 240px;
+        }
+
+        .student-list li {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .student-list li:first-child {
+            background-color: rgb(173, 255, 47, 0.4);
+        }
+
+        .student-list li:last-child {
+            background-color: rgb(216, 112, 147, 0.4);
+        }
+
+        .student-list li:hover {
+            background-color: rgb(0, 255, 255, 0.2);
+        }
+
+        .student-list li:hover .student-name {
+            color: blueviolet;
+        }
+
+        .student-list li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+
+        .student-name,
+        .percent-bar-wrapper {
+            display: inline-block;
+        }
+
+        .student-name {
+            width: 60px;
+        }
+
+        .percent-bar-wrapper {
+            width: 120px;
+            border: 1px solid blue;
+            background-color: white;
+        }
+
+        .percent-bar-wrapper div {
+            background-color: aqua;
+        }
+
+        .percent-bar--1 {
+            width: 80%;
+        }
+
+        .percent-bar--2 {
+            width: 75%;
+        }
+
+        .percent-bar--3 {
+            width: 70%;
+        }
+
+        .percent-bar--4 {
+            width: 65%;
+        }
+
+        .fa-up-long {
+            color: green;
+        }
+
+        .fa-down-long {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tiến độ hoàn thành bài tập</h2>
+
+    <form class="search-student-form">
+        <label for="search-student">Tìm kiếm học sinh:</label>
+        <input type="text" id="search-student">
+        <button>Tìm</button>
+    </form>
+
+    <ol class="student-list">
+        <li>
+            <span class="student-name">Mai</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--1">80%</div>
+            </span>
+            <i class="fa-solid fa-up-long"></i>
+        </li>
+        <li>
+            <span class="student-name">Nam</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--2">75%</div>
+            </span>
+            <i class="fa-solid fa-up-long"></i>
+        </li>
+        <li>
+            <span class="student-name">Linh</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--3">70%</div>
+            </span>
+            <i class="fa-solid fa-minus"></i>
+        </li>
+        <li>
+            <span class="student-name">Tú</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--4">65%</div>
+            </span>
+            <i class="fa-solid fa-down-long"></i>
+        </li>
+    </ol>
+</body>
+
+</html>

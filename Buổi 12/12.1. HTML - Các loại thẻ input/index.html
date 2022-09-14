@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+
+    input {
+      padding: 9px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    form {
+      padding: 48px;
+      background-image: linear-gradient(to bottom right, aqua, greenyellow);
+      border-radius: 9px;
+      color: #3b3b3b;
+      width: 480px;
+    }
+
+    .form-control {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .form-control input {
+      width: 70%;
+      margin-left: auto;
+    }
+
+    button {
+      font-size: inherit;
+      background-color: aquamarine;
+      padding: 9px 20px;
+      margin-top: 24px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <h2 class="text-center">Đăng ký tài khoản</h2>
+
+      <div class="form-control">
+        <label for="full-name">Họ và tên:</label>
+        <input type="text" id="full-name" required>
+      </div>
+
+      <div class="form-control">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="form-control">
+        <label for="password">Mật khẩu:</label>
+        <input minlength="6" type="password" id="password" required>
+      </div>
+
+      <div class="form-control">
+        <label for="age">Tuổi:</label>
+        <input min="18" max="60" type="number" id="age">
+      </div>
+
+      <div class="form-control">
+        <label for="birth">Năm sinh:</label>
+        <input type="datetime-local" id="birth">
+      </div>
+
+      <div class="form-control">
+        <label for="picture">Ảnh:</label>
+        <input type="file" id="picture">
+      </div>
+
+      <div class="text-center">
+        <button type="submit">Đăng ký</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

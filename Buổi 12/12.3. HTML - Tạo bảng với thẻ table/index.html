@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 16px;
+        }
+
+        th,
+        td {
+            padding: 6px 12px;
+            border: 2px solid #000;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Tên của bảng</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Hạng mục</th>
+                <th colspan="2">Trang phục</th>
+                <th>Phụ kiện</th>
+            </tr>
+            <tr>
+                <th>Quần</th>
+                <th>Áo</th>
+                <th>Túi xách</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Doanh số</th>
+                <td>80 triệu</td>
+                <td>90 triệu</td>
+                <td>100 triệu</td>
+            </tr>
+
+            <tr>
+                <th>KPI</th>
+                <td>80%</td>
+                <td>70%</td>
+                <td>90%</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th>Tổng</th>
+            <td>X</td>
+        </tfoot>
+    </table>
+</body>
+
+</html>

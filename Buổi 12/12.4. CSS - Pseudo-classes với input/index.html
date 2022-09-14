@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+
+    input {
+      padding: 9px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    button {
+      font-size: inherit;
+      background-color: aquamarine;
+      padding: 9px 20px;
+      margin-top: 24px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    label {
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+
+    form {
+      padding: 48px;
+      background-image: linear-gradient(to bottom right, aqua, greenyellow);
+      border-radius: 9px;
+      color: #3b3b3b;
+      width: 480px;
+    }
+
+    .form-control {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .form-control input:not(#agreement) {
+      width: 70%;
+      margin-left: auto;
+    }
+
+    .input-wrapper {
+      width: 70%;
+      margin-left: auto;
+    }
+
+    .input-wrapper input {
+      width: 100% !important;
+    }
+
+    #agreement {
+      margin-right: 0.8rem;
+    }
+
+    #agreement:checked~.agreement-label .approval {
+      display: inline;
+    }
+
+    #agreement:checked~.agreement-label .no-approval {
+      display: none;
+    }
+
+    .agreement-label .approval {
+      color: blue;
+      display: none;
+    }
+
+    .validation-message {
+      display: none;
+    }
+
+    input:focus {
+      background-color: aqua;
+      outline: 1px solid green;
+    }
+
+    #email:disabled {
+      background-color: rgb(194, 194, 194);
+    }
+
+    #password:invalid~.validation-message {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <h2 class="text-center">Đăng ký</h2>
+
+      <div class="form-control">
+        <label for="email">Email:</label>
+        <input type="email" id="email" disabled>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Mật khẩu:</label>
+        <div class="input-wrapper">
+          <input minlength="6" type="password" id="password">
+          <p class="validation-message">Mật khẩu có độ dài tối thiểu 6 ký tự</p>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="age">Tuổi:</label>
+        <input min="18" max="60" type="number" id="age">
+      </div>
+
+      <div class="form-control">
+        <input type="checkbox" id="agreement">
+        <label class="agreement-label" for="agreement">
+          <span class="no-approval">Đồng ý với điều khoản</span>
+          <span class="approval">Đã đồng ý với điều khoản</span>
+        </label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit">Đăng ký</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

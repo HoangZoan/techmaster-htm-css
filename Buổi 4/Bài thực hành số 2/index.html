@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Buổi 4 - Bài thực hành</title>
+
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        .student-list {
+            width: 240px;
+        }
+
+        .student-list li {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .student-list li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+
+        .student-list li:first-child {
+            background-color: rgb(173, 255, 47, 0.4);
+        }
+
+        .student-list li:last-child {
+            background-color: rgb(216, 112, 147, 0.4);
+        }
+
+        .student-name,
+        .percent-bar-wrapper {
+            display: inline-block;
+        }
+
+        .student-name {
+            width: 60px;
+        }
+
+        .percent-bar-wrapper {
+            width: 120px;
+            border: 1px solid blue;
+            background-color: white;
+        }
+
+        .percent-bar-wrapper div {
+            background-color: aqua;
+        }
+
+        .percent-bar--1 {
+            width: 80%;
+        }
+
+        .percent-bar--2 {
+            width: 75%;
+        }
+
+        .percent-bar--3 {
+            width: 70%;
+        }
+
+        .percent-bar--4 {
+            width: 65%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tiến độ hoàn thành bài tập</h2>
+    <ol class="student-list">
+        <li>
+            <span class="student-name">Mai</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--1">80%</div>
+            </span>
+        </li>
+        <li>
+            <span class="student-name">Nam</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--2">75%</div>
+            </span>
+        </li>
+        <li>
+            <span class="student-name">Linh</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--3">70%</div>
+            </span>
+        </li>
+        <li>
+            <span class="student-name">Tú</span>
+            <span class="percent-bar-wrapper">
+                <div class="percent-bar--4">65%</div>
+            </span>
+        </li>
+    </ol>
+</body>
+
+</html>
