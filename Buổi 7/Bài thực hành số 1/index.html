@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
+  <head>
     <title>Buổi 7 - Bài thực hành</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: sans-serif;
-        }
+      body {
+        font-family: sans-serif;
+      }
 
-        .container {
-            display: flex;
-            justify-content: center;
-        }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
 
-        .content-card {
-            width: 480px;
-            height: 360px;
-            background-image: url('./images/dog.webp');
-            background-size: cover;
-            display: flex;
-            align-items: flex-end;
-        }
+      .content-card {
+        width: 480px;
+        height: 360px;
+        background-image: url("./images/dog.webp");
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+      }
 
-        .content-text {
-            background-color: rgba(255, 255, 255, 0.25);
-            width: 100%;
-            padding: 12px 32px;
-            backdrop-filter: blur(3px);
-        }
+      .content-text {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 100%;
+        padding: 12px 32px;
+        backdrop-filter: blur(3px);
+      }
 
-        .content-text blockquote {
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-        }
+      .content-text blockquote {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+      }
 
-        .content-text blockquote::before {
-            content: '" ';
-            font-size: 36px;
-        }
+      .content-text blockquote::before {
+        content: '" ';
+        font-size: 36px;
+      }
 
-        .content-text blockquote::after {
-            content: '" ';
-            font-size: 36px;
-        }
+      .content-text blockquote::after {
+        content: '" ';
+        font-size: 36px;
+      }
 
-        .author {
-            text-align: right;
-            font-style: italic;
-        }
+      .author {
+        text-align: right;
+        font-style: italic;
+      }
 
-        .author::before {
-            content: '- ';
-        }
-
-        .checker:checked~.container blockquote {
-            color: red;
-        }
+      .author::before {
+        content: "- ";
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="content-card">
-            <div class="content-text">
-                <blockquote>Woof woof woof...</blockquote>
-                <div class="author">A wise dog said</div>
-            </div>
+      <div class="content-card">
+        <div class="content-text">
+          <blockquote>Woof woof woof...</blockquote>
+          <div class="author">A wise dog said</div>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

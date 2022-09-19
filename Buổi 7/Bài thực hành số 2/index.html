@@ -1,121 +1,118 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
+  <head>
     <title>Buổi 7 - Bài thực hành</title>
 
     <style>
-        * {
-            box-sizing: border-box;
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .content-card {
+        width: 480px;
+        height: 360px;
+        background-size: cover;
+        align-items: flex-end;
+        display: none;
+        animation: slide 0.8s;
+      }
+
+      .dog-card {
+        background-image: url("./images/dog.webp");
+      }
+
+      .cat-card {
+        background-image: url("./images/cat.webp");
+      }
+
+      .content-text {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 100%;
+        padding: 12px 32px;
+        backdrop-filter: blur(3px);
+      }
+
+      .content-text blockquote {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .content-text blockquote::before {
+        content: '" ';
+        font-size: 36px;
+      }
+
+      .content-text blockquote::after {
+        content: '" ';
+        font-size: 36px;
+      }
+
+      .author {
+        text-align: right;
+        font-style: italic;
+      }
+
+      .author::before {
+        content: "- ";
+      }
+
+      #dog:checked ~ .container .dog-card {
+        display: flex;
+      }
+
+      #cat:checked ~ .container .cat-card {
+        display: flex;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(-56px);
+          opacity: 0;
         }
 
-        body {
-            font-family: sans-serif;
+        50% {
+          transform: translateX(24px);
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
+        100% {
+          transform: translateX(0);
+          opacity: 1;
         }
-
-        .content-card {
-            width: 480px;
-            height: 360px;
-            background-size: cover;
-            display: flex;
-            align-items: flex-end;
-            display: none;
-            animation: slide 0.8s;
-        }
-
-        .dog-card {
-            background-image: url('./images/dog.webp');
-        }
-
-        .cat-card {
-            background-image: url('./images/cat.webp');
-        }
-
-        .content-text {
-            background-color: rgba(255, 255, 255, 0.25);
-            width: 100%;
-            padding: 12px 32px;
-            backdrop-filter: blur(3px);
-        }
-
-        .content-text blockquote {
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .content-text blockquote::before {
-            content: '" ';
-            font-size: 36px;
-        }
-
-        .content-text blockquote::after {
-            content: '" ';
-            font-size: 36px;
-        }
-
-        .author {
-            text-align: right;
-            font-style: italic;
-        }
-
-        .author::before {
-            content: '- ';
-        }
-
-        #dog:checked~.container .dog-card {
-            display: flex;
-        }
-
-        #cat:checked~.container .cat-card {
-            display: flex;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(-56px);
-                opacity: 0;
-            }
-
-            50% {
-                transform: translateX(24px);
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <input name="favorite-pet" id="dog" type="radio" checked>
+  <body>
+    <input name="favorite-pet" id="dog" type="radio" checked />
     <label for="dog">Dog</label>
-    <br>
-    <input name="favorite-pet" id="cat" type="radio">
+    <br />
+    <input name="favorite-pet" id="cat" type="radio" />
     <label for="cat">Cat</label>
 
     <div class="container">
-        <div class="content-card dog-card">
-            <div class="content-text">
-                <blockquote>Woof woof woof...</blockquote>
-                <div class="author">A wise dog said</div>
-            </div>
+      <div class="content-card dog-card">
+        <div class="content-text">
+          <blockquote>Woof woof woof...</blockquote>
+          <div class="author">A wise dog said</div>
         </div>
-        <div class="content-card cat-card">
-            <div class="content-text">
-                <blockquote>Meow meow meow...</blockquote>
-                <div class="author">A wise cat said</div>
-            </div>
+      </div>
+      <div class="content-card cat-card">
+        <div class="content-text">
+          <blockquote>Meow meow meow...</blockquote>
+          <div class="author">A wise cat said</div>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
